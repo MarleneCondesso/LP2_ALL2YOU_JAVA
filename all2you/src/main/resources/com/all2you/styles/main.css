@@ -1,0 +1,18 @@
+.tree-cell > .tree-disclosure-node > .arrow  {
+-fx-background-color: #FFFFFF;
+}
+.tree-cell:expanded {
+    -fx-background-color: #FFFFFF ;
+    -fx-align-content:  center;
+}
+.tree-cell:pressed, .tree-cell:cell-selection{
+    -fx-backroud-color: #B0B4C3
+}
+.tree-cell {
+    -fx-background-color: #FFFFFF ;
+    -fx-text-fill: #ffffff ;
+    -fx-Font-Size : 14;
+}
+.treeview{
+    -fx-stroke: #eeeeee
+}

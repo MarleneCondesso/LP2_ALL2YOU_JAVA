@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="673.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.all2you.controllers.ContactoController">
+   <children>
+      <Line endX="488.00006103515625" endY="-7.0" layoutX="112.0" layoutY="78.0" startX="-110.79290771484375" startY="-7.0" stroke="#fcbd6d" strokeWidth="3.0" />
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="576.0">
+         <children>
+            <Label fx:id="lblTitulo">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="85.0" layoutY="138.0" prefHeight="433.0" prefWidth="447.0" spacing="20.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="423.0" prefWidth="124.0" spacing="50.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="173.0" text="Nome do Cliente">
+                     <font>
+                        <Font name="Arial Nova" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="177.0" text="Nif do Cliente">
+                     <font>
+                        <Font name="Arial Nova" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="171.0" text="Contacto">
+                     <font>
+                        <Font name="Arial Nova" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="185.0" text="Tipo de Contacto">
+                     <font>
+                        <Font name="Arial Nova" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets top="-50.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="428.0" prefWidth="283.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="txtNomeCliente" disable="true" editable="false" focusTraversable="false" prefHeight="50.0" prefWidth="212.0" />
+                  <TextField fx:id="txtNifCliente" disable="true" editable="false" focusTraversable="false" prefHeight="50.0" />
+                  <TextField fx:id="txtContacto" focusTraversable="false" prefHeight="50.0" prefWidth="212.0" promptText="Insira o Contacto " />
+                  <ComboBox fx:id="comboTpContacto" focusTraversable="false" prefHeight="50.0" prefWidth="283.0" promptText="Selecione o Tipo de Contacto" />
+               </children>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets top="55.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="1.0" layoutY="589.0" prefHeight="78.0" prefWidth="609.0" spacing="10.0">
+         <children>
+            <Button fx:id="btnLimpar" mnemonicParsing="false" onMouseClicked="#cleanFields" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 80px; -fx-background-radius: 80; -fx-background-color: #FFFFFF; -fx-border-color: #FCBD6D; -fx-border-width: 5;" text="Limpar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+               <graphic>
+                  <FontAwesomeIconView glyphName="ERASER" size="15" />
+               </graphic>
+            </Button>
+            <Button fx:id="btnCancelar" cancelButton="true" mnemonicParsing="false" onMouseClicked="#cancelar" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 80px; -fx-background-radius: 80; -fx-background-color: #FFFFFF; -fx-border-color: #FCBD6D; -fx-border-width: 5;" text="Sair">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+               <graphic>
+                  <FontAwesomeIconView glyphName="TIMES" size="15" />
+               </graphic>
+            </Button>
+            <Button fx:id="btnGuardar" mnemonicParsing="false" onMouseClicked="#guardar" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 80px; -fx-background-radius: 80; -fx-background-color: #FCBD6D; -fx-border-color: #FFFFFF; -fx-border-width: 5;" text="Guardar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+               <graphic>
+                  <FontAwesomeIconView glyphName="SAVE" size="15" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

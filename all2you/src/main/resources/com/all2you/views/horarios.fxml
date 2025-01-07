@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.control.LocalTimePicker?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="673.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.all2you.controllers.HorariosController">
+    <children>
+        <Label alignment="CENTER" layoutX="37.0" layoutY="37.0" prefHeight="21.0" prefWidth="946.0" text="CONFIGURAÇÃO DE HORÁRIOS" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <TabPane fx:id="tabpaneHorarios" layoutX="33.0" layoutY="101.0" prefHeight="517.0" prefWidth="946.0" style="-fx-background-color: #ffffff;" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="tabMaquinas" closable="false" text="Máquinas">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="499.0" prefWidth="946.0">
+                            <children>
+                                <ComboBox fx:id="comboMaquinas" layoutX="25.0" layoutY="25.0" prefHeight="41.0" prefWidth="279.0" promptText="Selecione a máquina" />
+                                <AnchorPane fx:id="anchMaqDias" layoutX="25.0" layoutY="80.0" prefHeight="375.0" prefWidth="893.0">
+                                    <children>
+                                        <CheckBox fx:id="maq_seg" layoutY="16.0" mnemonicParsing="false" text="2ª Feira" />
+                                        <CheckBox fx:id="maq_ter" layoutY="68.0" mnemonicParsing="false" text="3ª Feira" />
+                                        <CheckBox fx:id="maq_qua" layoutY="120.0" mnemonicParsing="false" text="4ª Feira" />
+                                        <CheckBox fx:id="maq_qui" layoutY="172.0" mnemonicParsing="false" text="5ª Feira" />
+                                        <CheckBox fx:id="maq_sex" layoutY="224.0" mnemonicParsing="false" text="6ª Feira" />
+                                        <CheckBox fx:id="maq_sab" layoutY="276.0" mnemonicParsing="false" text="Sábado" />
+                                        <CheckBox fx:id="maq_dom" layoutY="328.0" mnemonicParsing="false" text="Domingo" />
+                                       
+                                        <LocalTimePicker fx:id="maq_seg_ini01" layoutX="196.0" layoutY="7.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_seg_fim01" layoutX="299.0" layoutY="7.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_seg_ini02" layoutX="453.0" layoutY="6.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_seg_fim02" layoutX="553.0" layoutY="6.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        
+                                        <LocalTimePicker fx:id="maq_ter_ini01" layoutX="196.0" layoutY="59.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_ter_fim01" layoutX="299.0" layoutY="59.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_ter_ini02" layoutX="453.0" layoutY="58.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_ter_fim02" layoutX="553.0" layoutY="58.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        
+                                        <LocalTimePicker fx:id="maq_qua_ini01" layoutX="196.0" layoutY="112.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_qua_fim01" layoutX="299.0" layoutY="112.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_qua_ini02" layoutX="453.0" layoutY="111.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_qua_fim02" layoutX="553.0" layoutY="111.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        
+                                        <LocalTimePicker fx:id="maq_qui_ini01" layoutX="196.0" layoutY="164.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_qui_fim01" layoutX="299.0" layoutY="164.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_qui_ini02" layoutX="453.0" layoutY="163.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_qui_fim02" layoutX="553.0" layoutY="163.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        
+                                        <LocalTimePicker fx:id="maq_sex_ini01" layoutX="196.0" layoutY="216.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_sex_fim01" layoutX="299.0" layoutY="216.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_sex_ini02" layoutX="453.0" layoutY="215.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_sex_fim02" layoutX="553.0" layoutY="215.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        
+                                        <LocalTimePicker fx:id="maq_sab_ini01" layoutX="196.0" layoutY="268.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_sab_fim01" layoutX="299.0" layoutY="268.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_sab_ini02" layoutX="453.0" layoutY="267.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_sab_fim02" layoutX="553.0" layoutY="267.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        
+                                        <LocalTimePicker fx:id="maq_dom_ini01" layoutX="196.0" layoutY="320.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_dom_fim01" layoutX="299.0" layoutY="320.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_dom_ini02" layoutX="453.0" layoutY="319.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="maq_dom_fim02" layoutX="553.0" layoutY="319.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                              <LocalTimePicker fx:id="maq_seg_ini021" layoutX="708.0" layoutY="6.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                              <LocalTimePicker fx:id="maq_seg_fim021" layoutX="808.0" layoutY="6.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                              <LocalTimePicker fx:id="maq_ter_ini021" layoutX="708.0" layoutY="58.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                              <LocalTimePicker fx:id="maq_ter_fim021" layoutX="808.0" layoutY="58.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                              <LocalTimePicker fx:id="maq_qua_ini021" layoutX="708.0" layoutY="111.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                              <LocalTimePicker fx:id="maq_qua_fim021" layoutX="808.0" layoutY="111.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                              <LocalTimePicker fx:id="maq_qui_ini021" layoutX="708.0" layoutY="163.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                              <LocalTimePicker fx:id="maq_qui_fim021" layoutX="808.0" layoutY="163.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                              <LocalTimePicker fx:id="maq_sex_ini021" layoutX="708.0" layoutY="215.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                              <LocalTimePicker fx:id="maq_sex_fim021" layoutX="808.0" layoutY="215.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                              <LocalTimePicker fx:id="maq_sab_ini021" layoutX="708.0" layoutY="267.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                              <LocalTimePicker fx:id="maq_sab_fim021" layoutX="808.0" layoutY="267.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                              <LocalTimePicker fx:id="maq_dom_ini021" layoutX="708.0" layoutY="319.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                              <LocalTimePicker fx:id="maq_dom_fim021" layoutX="808.0" layoutY="319.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+
+                                    </children>
+                                </AnchorPane>
+                                <HBox layoutX="488.0" layoutY="24.0" prefHeight="43.0" prefWidth="430.0" spacing="20.0">
+                                    <children>
+                                        <Button fx:id="btnMaqCancelar" lineSpacing="10.0" mnemonicParsing="false" onAction="#cancelarHorarioMaquina" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 80px; -fx-background-radius: 80; -fx-background-color: #FFFFFF; -fx-border-color: #FCBD6D; -fx-border-width: 5;" text="Cancelar">
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                            <effect>
+                                                <Glow />
+                                            </effect>
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="TIMES" size="15" />
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="btnMaqEliminar" lineSpacing="10.0" mnemonicParsing="false" onAction="#eliminarHorarioMaquina" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 80px; -fx-background-radius: 80; -fx-background-color: #FFFFFF; -fx-border-color: #FCBD6D; -fx-border-width: 5;" text="Eliminar">
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                            <effect>
+                                                <Glow />
+                                            </effect>
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="TRASH" size="15" />
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="btnMaqGuardar" mnemonicParsing="false" onAction="#guardarHorarioMaquina" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 80px; -fx-background-radius: 80; -fx-background-color: #FFFFFF; -fx-border-color: #FCBD6D; -fx-border-width: 5;" text="Guardar">
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                            <effect>
+                                                <Glow />
+                                            </effect>
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="SAVE" size="15" />
+                                            </graphic>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tabOperadores" closable="false" text="Operadores">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <ComboBox fx:id="comboOperadores" layoutX="25.0" layoutY="25.0" prefHeight="41.0" prefWidth="279.0" promptText="Selecione o operador" />
+                                <AnchorPane fx:id="anchOpDias" layoutX="27.0" layoutY="74.0" prefHeight="375.0" prefWidth="890.0">
+                                    <children>
+                                        <CheckBox fx:id="op_seg" layoutX="297.0" layoutY="17.0" mnemonicParsing="false" text="2ª Feira" />
+                                        <CheckBox fx:id="op_ter" layoutX="297.0" layoutY="69.0" mnemonicParsing="false" text="3ª Feira" />
+                                        <CheckBox fx:id="op_qua" layoutX="297.0" layoutY="121.0" mnemonicParsing="false" text="4ª Feira" />
+                                        <CheckBox fx:id="op_qui" layoutX="297.0" layoutY="173.0" mnemonicParsing="false" text="5ª Feira" />
+                                        <CheckBox fx:id="op_sex" layoutX="297.0" layoutY="225.0" mnemonicParsing="false" text="6ª Feira" />
+                                        <CheckBox fx:id="op_sab" layoutX="297.0" layoutY="277.0" mnemonicParsing="false" text="Sábado" />
+                                        <CheckBox fx:id="op_dom" layoutX="297.0" layoutY="329.0" mnemonicParsing="false" text="Domingo" />
+                                    
+                                        <LocalTimePicker fx:id="op_seg_ini01" layoutX="460.0" layoutY="7.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_seg_fim01" layoutX="563.0" layoutY="7.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_seg_ini02" layoutX="691.0" layoutY="6.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_seg_fim02" layoutX="791.0" layoutY="6.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        
+                                        <LocalTimePicker fx:id="op_ter_ini01" layoutX="460.0" layoutY="59.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_ter_fim01" layoutX="563.0" layoutY="59.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_ter_ini02" layoutX="691.0" layoutY="58.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_ter_fim02" layoutX="791.0" layoutY="58.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        
+                                        <LocalTimePicker fx:id="op_qua_ini01" layoutX="460.0" layoutY="112.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_qua_fim01" layoutX="563.0" layoutY="112.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_qua_ini02" layoutX="691.0" layoutY="111.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_qua_fim02" layoutX="791.0" layoutY="111.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        
+                                        <LocalTimePicker fx:id="op_qui_ini01" layoutX="460.0" layoutY="164.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_qui_fim01" layoutX="563.0" layoutY="164.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_qui_ini02" layoutX="691.0" layoutY="163.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_qui_fim02" layoutX="791.0" layoutY="163.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        
+                                        <LocalTimePicker fx:id="op_sex_ini01" layoutX="460.0" layoutY="216.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_sex_fim01" layoutX="563.0" layoutY="216.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_sex_ini02" layoutX="691.0" layoutY="215.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_sex_fim02" layoutX="791.0" layoutY="215.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        
+                                        <LocalTimePicker fx:id="op_sab_ini01" layoutX="460.0" layoutY="268.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_sab_fim01" layoutX="563.0" layoutY="268.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_sab_ini02" layoutX="691.0" layoutY="267.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_sab_fim02" layoutX="791.0" layoutY="267.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        
+                                        <LocalTimePicker fx:id="op_dom_ini01" layoutX="460.0" layoutY="320.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_dom_fim01" layoutX="563.0" layoutY="320.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_dom_ini02" layoutX="691.0" layoutY="319.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                        <LocalTimePicker fx:id="op_dom_fim02" layoutX="791.0" layoutY="319.0" minuteStep="15" prefHeight="0.0" prefWidth="85.0" />
+                                       
+                                    </children>
+                                </AnchorPane>
+                                <HBox layoutX="485.0" layoutY="24.0" prefHeight="43.0" prefWidth="430.0" spacing="20.0">
+                                    <children>
+                                        <Button fx:id="btnOpCancelar" lineSpacing="10.0" mnemonicParsing="false" onAction="#cancelarHorarioOperador" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 80px; -fx-background-radius: 80; -fx-background-color: #FFFFFF; -fx-border-color: #FCBD6D; -fx-border-width: 5;" text="Cancelar">
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                            <effect>
+                                                <Glow />
+                                            </effect>
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="TIMES" size="15" />
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="btnOpEliminar" lineSpacing="10.0" mnemonicParsing="false" onAction="#eliminarHorarioOperador" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 80px; -fx-background-radius: 80; -fx-background-color: #FFFFFF; -fx-border-color: #FCBD6D; -fx-border-width: 5;" text="Eliminar">
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                            <effect>
+                                                <Glow />
+                                            </effect>
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="TRASH" size="15" />
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="btnOpGuardar" mnemonicParsing="false" onAction="#guardarHorarioOperador" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 80px; -fx-background-radius: 80; -fx-background-color: #FFFFFF; -fx-border-color: #FCBD6D; -fx-border-width: 5;" text="Guardar">
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                            <effect>
+                                                <Glow />
+                                            </effect>
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="SAVE" size="15" />
+                                            </graphic>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</Pane>

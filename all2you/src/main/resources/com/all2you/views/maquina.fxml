@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="maquina" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.all2you.controllers.MaquinaController">
+    <children>
+        <HBox alignment="CENTER" prefHeight="61.0" prefWidth="600.0">
+            <children>
+                <Label fx:id="lblTitulo" alignment="CENTER" contentDisplay="CENTER" prefHeight="46.0" prefWidth="583.0">
+                    <font>
+                        <Font name="System Bold" size="30.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <Line endX="498.70709228515625" endY="-7.0" layoutX="102.0" layoutY="68.0" startX="-110.79290771484375" startY="-7.0" stroke="#fcbd6d" strokeWidth="3.0" />
+        <TextField fx:id="txtId" focusTraversable="false" layoutX="217.0" layoutY="105.0" prefHeight="45.0" prefWidth="248.0" promptText="Insira o id da máquina" />
+        <Label alignment="CENTER" layoutX="135.0" layoutY="269.0" text="Estado">
+            <font>
+                <Font name="Arial Nova" size="15.0" />
+            </font>
+        </Label>
+
+        <ComboBox fx:id="comboEstado" focusTraversable="false" layoutX="217.0" layoutY="256.0" prefHeight="45.0" prefWidth="248.0" promptText="Insira o estado da máquina" />
+
+        <Label alignment="CENTER" layoutX="149.0" layoutY="119.0" text="Id">
+            <font>
+                <Font name="Arial Nova" size="15.0" />
+            </font>
+        </Label>
+      <Label alignment="CENTER" layoutX="82.0" layoutY="191.0" text="Tipo de Operação">
+         <font>
+            <Font name="Arial Nova" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboTpOp" focusTraversable="false" layoutX="217.0" layoutY="181.0" prefHeight="42.0" prefWidth="248.0" promptText="Insira o Tipo de Operação" />
+                
+        <HBox alignment="CENTER" layoutY="319.0" prefHeight="78.0" prefWidth="600.0" spacing="10.0">
+            <children>
+                <Button fx:id="btnLimpar" mnemonicParsing="false" onMouseClicked="#cleanFields" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 80px; -fx-background-radius: 80; -fx-background-color: #FFFFFF; -fx-border-color: #FCBD6D; -fx-border-width: 5;" text="Limpar">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <effect>
+                        <Glow />
+                    </effect>
+               <graphic>
+                  <FontAwesomeIconView glyphName="ERASER" size="15" />
+               </graphic>
+                </Button>
+                <Button fx:id="btnCancelar" cancelButton="true" mnemonicParsing="false" onMouseClicked="#cancelar" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 80px; -fx-background-radius: 80; -fx-background-color: #FFFFFF; -fx-border-color: #FCBD6D; -fx-border-width: 5;" text="Sair">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <effect>
+                        <Glow />
+                    </effect>
+               <graphic>
+                  <FontAwesomeIconView glyphName="TIMES" size="15" />
+               </graphic>
+                </Button>
+                <Button fx:id="btnAdicionar" mnemonicParsing="false" onMouseClicked="#guardar" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 80px; -fx-background-radius: 80; -fx-background-color: #FCBD6D; -fx-border-color: #FFFFFF; -fx-border-width: 5;" text="Guardar">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <effect>
+                        <Glow />
+                    </effect>
+               <graphic>
+                  <FontAwesomeIconView glyphName="SAVE" size="15" />
+               </graphic>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+</Pane>
